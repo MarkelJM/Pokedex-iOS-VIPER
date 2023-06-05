@@ -22,6 +22,33 @@
 		D3EB8D022A2DCA04004F559C /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB8D012A2DCA04004F559C /* Pokemon.swift */; };
 		D3EB8D032A2DCA04004F559C /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB8D012A2DCA04004F559C /* Pokemon.swift */; };
 		D3EB8D042A2DCA04004F559C /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB8D012A2DCA04004F559C /* Pokemon.swift */; };
+		D3EB8D072A2E0F01004F559C /* PokemonPK.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3EB8D052A2E0F01004F559C /* PokemonPK.xcdatamodeld */; };
+		D3EB8D082A2E0F01004F559C /* PokemonPK.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3EB8D052A2E0F01004F559C /* PokemonPK.xcdatamodeld */; };
+		D3EB8D092A2E0F01004F559C /* PokemonPK.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3EB8D052A2E0F01004F559C /* PokemonPK.xcdatamodeld */; };
+		D3EB8D0B2A2E0FCD004F559C /* Pokemon+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB8D0A2A2E0FCD004F559C /* Pokemon+CoreData.swift */; };
+		D3EB8D0C2A2E0FCD004F559C /* Pokemon+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB8D0A2A2E0FCD004F559C /* Pokemon+CoreData.swift */; };
+		D3EB8D0D2A2E0FCD004F559C /* Pokemon+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB8D0A2A2E0FCD004F559C /* Pokemon+CoreData.swift */; };
+		D3EB8D0F2A2E3922004F559C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB8D0E2A2E3922004F559C /* CoreDataManager.swift */; };
+		D3EB8D102A2E3922004F559C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB8D0E2A2E3922004F559C /* CoreDataManager.swift */; };
+		D3EB8D112A2E3922004F559C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB8D0E2A2E3922004F559C /* CoreDataManager.swift */; };
+		D3EB8D132A2E47E5004F559C /* CoreDataUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB8D122A2E47E5004F559C /* CoreDataUtils.swift */; };
+		D3EB8D142A2E47E5004F559C /* CoreDataUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB8D122A2E47E5004F559C /* CoreDataUtils.swift */; };
+		D3EB8D152A2E47E5004F559C /* CoreDataUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB8D122A2E47E5004F559C /* CoreDataUtils.swift */; };
+		D3EB8D1C2A2E5281004F559C /* RouterLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB8D1B2A2E5281004F559C /* RouterLogin.swift */; };
+		D3EB8D1D2A2E5281004F559C /* RouterLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB8D1B2A2E5281004F559C /* RouterLogin.swift */; };
+		D3EB8D1E2A2E5281004F559C /* RouterLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB8D1B2A2E5281004F559C /* RouterLogin.swift */; };
+		D3EB8D202A2E5296004F559C /* PresenterLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB8D1F2A2E5296004F559C /* PresenterLogin.swift */; };
+		D3EB8D212A2E5296004F559C /* PresenterLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB8D1F2A2E5296004F559C /* PresenterLogin.swift */; };
+		D3EB8D222A2E5296004F559C /* PresenterLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB8D1F2A2E5296004F559C /* PresenterLogin.swift */; };
+		D3EB8D242A2E52A8004F559C /* InteractorLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB8D232A2E52A8004F559C /* InteractorLogin.swift */; };
+		D3EB8D252A2E52A8004F559C /* InteractorLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB8D232A2E52A8004F559C /* InteractorLogin.swift */; };
+		D3EB8D262A2E52A8004F559C /* InteractorLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB8D232A2E52A8004F559C /* InteractorLogin.swift */; };
+		D3EB8D392A2E5891004F559C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB8D372A2E5891004F559C /* LoginViewController.swift */; };
+		D3EB8D3A2A2E5891004F559C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB8D372A2E5891004F559C /* LoginViewController.swift */; };
+		D3EB8D3B2A2E5891004F559C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB8D372A2E5891004F559C /* LoginViewController.swift */; };
+		D3EB8D3C2A2E5891004F559C /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3EB8D382A2E5891004F559C /* LoginViewController.xib */; };
+		D3EB8D3D2A2E5891004F559C /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3EB8D382A2E5891004F559C /* LoginViewController.xib */; };
+		D3EB8D3E2A2E5891004F559C /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3EB8D382A2E5891004F559C /* LoginViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +86,15 @@
 		D3EB8CF32A2DC489004F559C /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
 		D3EB8CF72A2DC953004F559C /* PokeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeAPI.swift; sourceTree = "<group>"; };
 		D3EB8D012A2DCA04004F559C /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		D3EB8D062A2E0F01004F559C /* PokemonPK.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PokemonPK.xcdatamodel; sourceTree = "<group>"; };
+		D3EB8D0A2A2E0FCD004F559C /* Pokemon+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pokemon+CoreData.swift"; sourceTree = "<group>"; };
+		D3EB8D0E2A2E3922004F559C /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		D3EB8D122A2E47E5004F559C /* CoreDataUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataUtils.swift; sourceTree = "<group>"; };
+		D3EB8D1B2A2E5281004F559C /* RouterLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterLogin.swift; sourceTree = "<group>"; };
+		D3EB8D1F2A2E5296004F559C /* PresenterLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterLogin.swift; sourceTree = "<group>"; };
+		D3EB8D232A2E52A8004F559C /* InteractorLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorLogin.swift; sourceTree = "<group>"; };
+		D3EB8D372A2E5891004F559C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D3EB8D382A2E5891004F559C /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +254,11 @@
 		D3EB8CFF2A2DC9BB004F559C /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				D3EB8D1A2A2E5115004F559C /* Router */,
+				D3EB8D192A2E5110004F559C /* Entity */,
+				D3EB8D182A2E5108004F559C /* Presenter */,
+				D3EB8D172A2E50FE004F559C /* Interactor */,
+				D3EB8D162A2E50F9004F559C /* View */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -225,8 +266,52 @@
 		D3EB8D002A2DC9C1004F559C /* Coredata */ = {
 			isa = PBXGroup;
 			children = (
+				D3EB8D052A2E0F01004F559C /* PokemonPK.xcdatamodeld */,
+				D3EB8D0A2A2E0FCD004F559C /* Pokemon+CoreData.swift */,
+				D3EB8D0E2A2E3922004F559C /* CoreDataManager.swift */,
+				D3EB8D122A2E47E5004F559C /* CoreDataUtils.swift */,
 			);
 			path = Coredata;
+			sourceTree = "<group>";
+		};
+		D3EB8D162A2E50F9004F559C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D3EB8D372A2E5891004F559C /* LoginViewController.swift */,
+				D3EB8D382A2E5891004F559C /* LoginViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D3EB8D172A2E50FE004F559C /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				D3EB8D232A2E52A8004F559C /* InteractorLogin.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		D3EB8D182A2E5108004F559C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D3EB8D1F2A2E5296004F559C /* PresenterLogin.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D3EB8D192A2E5110004F559C /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		D3EB8D1A2A2E5115004F559C /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				D3EB8D1B2A2E5281004F559C /* RouterLogin.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,6 +418,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3EB8D3C2A2E5891004F559C /* LoginViewController.xib in Resources */,
 				D3EB8CCF2A2DC1A1004F559C /* LaunchScreen.storyboard in Resources */,
 				D3EB8CCC2A2DC1A1004F559C /* Assets.xcassets in Resources */,
 				D3EB8CC72A2DC1A0004F559C /* Main.storyboard in Resources */,
@@ -343,6 +429,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3EB8D3D2A2E5891004F559C /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +437,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3EB8D3E2A2E5891004F559C /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,11 +449,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3EB8D022A2DCA04004F559C /* Pokemon.swift in Sources */,
+				D3EB8D0B2A2E0FCD004F559C /* Pokemon+CoreData.swift in Sources */,
+				D3EB8D1C2A2E5281004F559C /* RouterLogin.swift in Sources */,
+				D3EB8D392A2E5891004F559C /* LoginViewController.swift in Sources */,
 				D3EB8CF42A2DC489004F559C /* URL.swift in Sources */,
+				D3EB8D242A2E52A8004F559C /* InteractorLogin.swift in Sources */,
+				D3EB8D202A2E5296004F559C /* PresenterLogin.swift in Sources */,
+				D3EB8D132A2E47E5004F559C /* CoreDataUtils.swift in Sources */,
+				D3EB8D072A2E0F01004F559C /* PokemonPK.xcdatamodeld in Sources */,
 				D3EB8CCA2A2DC1A0004F559C /* Pokedex_VIPER_UIKit.xcdatamodeld in Sources */,
 				D3EB8CC42A2DC1A0004F559C /* ViewController.swift in Sources */,
 				D3EB8CF82A2DC953004F559C /* PokeAPI.swift in Sources */,
 				D3EB8CC02A2DC1A0004F559C /* AppDelegate.swift in Sources */,
+				D3EB8D0F2A2E3922004F559C /* CoreDataManager.swift in Sources */,
 				D3EB8CC22A2DC1A0004F559C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,7 +470,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3EB8D212A2E5296004F559C /* PresenterLogin.swift in Sources */,
+				D3EB8D0C2A2E0FCD004F559C /* Pokemon+CoreData.swift in Sources */,
+				D3EB8D1D2A2E5281004F559C /* RouterLogin.swift in Sources */,
+				D3EB8D082A2E0F01004F559C /* PokemonPK.xcdatamodeld in Sources */,
+				D3EB8D142A2E47E5004F559C /* CoreDataUtils.swift in Sources */,
 				D3EB8CDA2A2DC1A1004F559C /* Pokedex_VIPER_UIKitTests.swift in Sources */,
+				D3EB8D252A2E52A8004F559C /* InteractorLogin.swift in Sources */,
+				D3EB8D102A2E3922004F559C /* CoreDataManager.swift in Sources */,
+				D3EB8D3A2A2E5891004F559C /* LoginViewController.swift in Sources */,
 				D3EB8D032A2DCA04004F559C /* Pokemon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,9 +487,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3EB8D112A2E3922004F559C /* CoreDataManager.swift in Sources */,
+				D3EB8D152A2E47E5004F559C /* CoreDataUtils.swift in Sources */,
+				D3EB8D222A2E5296004F559C /* PresenterLogin.swift in Sources */,
 				D3EB8CE42A2DC1A1004F559C /* Pokedex_VIPER_UIKitUITests.swift in Sources */,
 				D3EB8CE62A2DC1A1004F559C /* Pokedex_VIPER_UIKitUITestsLaunchTests.swift in Sources */,
+				D3EB8D092A2E0F01004F559C /* PokemonPK.xcdatamodeld in Sources */,
+				D3EB8D262A2E52A8004F559C /* InteractorLogin.swift in Sources */,
 				D3EB8D042A2DCA04004F559C /* Pokemon.swift in Sources */,
+				D3EB8D1E2A2E5281004F559C /* RouterLogin.swift in Sources */,
+				D3EB8D0D2A2E0FCD004F559C /* Pokemon+CoreData.swift in Sources */,
+				D3EB8D3B2A2E5891004F559C /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -713,6 +825,16 @@
 			);
 			currentVersion = D3EB8CC92A2DC1A0004F559C /* Pokedex_VIPER_UIKit.xcdatamodel */;
 			path = Pokedex_VIPER_UIKit.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		D3EB8D052A2E0F01004F559C /* PokemonPK.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D3EB8D062A2E0F01004F559C /* PokemonPK.xcdatamodel */,
+			);
+			currentVersion = D3EB8D062A2E0F01004F559C /* PokemonPK.xcdatamodel */;
+			path = PokemonPK.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

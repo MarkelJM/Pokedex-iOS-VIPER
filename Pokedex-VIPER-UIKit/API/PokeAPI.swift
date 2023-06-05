@@ -22,7 +22,7 @@ enum NetworkError: Error {
 protocol PokeApiProtocol {
     // El método fetchPokemons utiliza una función de cierre (o callback) para manejar la respuesta cuando se recibe.
     // Result es una enumeración que representa el éxito o el fracaso de una operación. En este caso, si la operación es exitosa, devuelve un array de Pokemon. Si falla, devuelve un Error.
-    func fetchPokemons(completion: @escaping (Result<[Pokemon], Error>) -> Void)
+    func fetchPokemons(completion: @escaping (Result<[PokemonModel], Error>) -> Void)
 }
 
 
@@ -30,7 +30,7 @@ protocol PokeApiProtocol {
 class PokeApi: PokeApiProtocol {
     
     // Implementa el método fetchPokemons del protocolo. En este método, realiza una llamada a la API y luego pasa los datos recibidos a la función de cierre.
-    func fetchPokemons(completion: @escaping (Result<[Pokemon], Error>) -> Void) {
+    func fetchPokemons(completion: @escaping (Result<[PokemonModel], Error>) -> Void) {
         
         // Trata de convertir el string de la URL en un objeto URL. Si falla, llama a la función de cierre con un error y luego termina el método.
         guard let url = URL(string: ConstantsURL.api_base_url) else {
@@ -55,7 +55,7 @@ class PokeApi: PokeApiProtocol {
             
             // Intenta decodificar los datos recibidos como un array de Pokemon. Si la decodificación falla, llama a la función de cierre con el error de decodificación.
             do {
-                let pokemons = try JSONDecoder().decode([Pokemon].self, from: data)
+                let pokemons = try JSONDecoder().decode([PokemonModel].self, from: data)
                 // Si la decodificación es exitosa, llama a la función de cierre con los datos decodificados.
                 completion(.success(pokemons))
             } catch {
