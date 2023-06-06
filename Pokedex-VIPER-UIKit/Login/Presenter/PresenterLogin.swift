@@ -6,3 +6,31 @@
 //
 
 import Foundation
+import UIKit
+
+protocol PresenterLoginProtocol : AnyObject{
+    func startButtonWasPressed()
+}
+
+class PresenterLogin: PresenterLoginProtocol{
+    weak var view: LoginViewControllerProtocol?
+    var interactor: InputInteractorLoginProtocol?
+    var router: RouterLoginProtocol?
+    
+    /* para interactuar con el boton de la view*/
+    func startButtonWasPressed() {
+        interactor?.handleStartButtonTapped()
+    }
+}
+
+extension PresenterLogin: OutputInteractorLoginProtocol {
+    func didSuccessfullyHandleStartButtonTapped() {
+        router?.navigateToPokemonList()
+    }
+    
+    func didFailHandlingStartButtonTapped(withError error: Error) {
+        view?.showError(error)
+    }
+}
+
+

@@ -7,26 +7,33 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+protocol LoginViewControllerProtocol : AnyObject{
+    func showError(_ error: Error)
 
+}
+
+class LoginViewController: UIViewController, LoginViewControllerProtocol {
+    var presenter : PresenterLoginProtocol?
     
     @IBOutlet weak var logoImage: UIImageView!
     @IBOutlet weak var startButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        startButton.addTarget(self, action: #selector(startButtonTapped), for: .touchUpInside)
+        
+    }
+    
+    
+    @objc func startButtonTapped() {
+        presenter?.startButtonWasPressed()
+    }
+    
+    func showError(_ error: Error) {
+        // mostrar error, pero lo hare mas tarde
     }
 
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }

@@ -6,3 +6,23 @@
 //
 
 import Foundation
+
+
+protocol InputInteractorLoginProtocol : AnyObject{
+    func handleStartButtonTapped()
+}
+
+protocol OutputInteractorLoginProtocol: AnyObject{
+    func didSuccessfullyHandleStartButtonTapped()
+    func didFailHandlingStartButtonTapped(withError error: Error)
+}
+
+class InteractorLogin: InputInteractorLoginProtocol{
+    weak var presenter: OutputInteractorLoginProtocol?
+    
+    func handleStartButtonTapped() {
+        presenter?.didSuccessfullyHandleStartButtonTapped()
+        
+        
+    }
+}
