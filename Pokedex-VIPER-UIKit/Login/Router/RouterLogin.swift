@@ -34,7 +34,7 @@ class RouterLogin: RouterLoginProtocol {
     
     func navigateToPokemonList() {
         // nombre provisional
-        let pokemonListViewController = PokemonListViewController()
+        let pokemonListViewController = PokedexListViewController()
         viewController?.navigationController?.pushViewController(pokemonListViewController, animated: true)
     }
 }
