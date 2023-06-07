@@ -17,7 +17,7 @@ protocol ViewToPresenterProtocol: AnyObject {
 }
 
 protocol InteractorToPresenterProtocol: AnyObject {
-    func didFetchPokemons(_ pokemons: [PokemonModel])
+    func didFetchPokemons(_ pokemons: [PokemonModel?])
     func didFailFetchingPokemons(withError error: Error)
 }
 
@@ -30,19 +30,31 @@ class PokedexListPresenter: ViewToPresenterProtocol , InteractorToPresenterProto
     var router: PokedexRouterProtocolo?
     
     func viewDidLoad() {
+        print("Presenter: viewDidLoad")
         interactor?.fetchPokemons()
     }
     
     func didSelectPokemon(_ pokemon: PokemonModel) {
         router?.navigateToPokemonDetail(pokemon)
     }
-    
+    /*
     func didFetchPokemons(_ pokemons: [PokemonModel]) {
-    
+        DispatchQueue.main.async {
+            self.view?.showPokemons(pokemons)  // Llama al método del view para mostrar los pokemons
+        }
     }
+     */
+    func didFetchPokemons(_ pokemons: [PokemonModel?]) {
+        let validPokemons = pokemons.compactMap { $0 }  // ignora los elementos nulos
+        DispatchQueue.main.async {
+            self.view?.showPokemons(validPokemons) // Llama al método del view para mostrar los pokemons
+        }
+    }
+
+
     
     func didFailFetchingPokemons(withError error: Error) {
-    
+        view?.showError(error)  // Llama al método del view para mostrar el error
     }
 }
 

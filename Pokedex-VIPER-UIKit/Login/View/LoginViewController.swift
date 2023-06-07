@@ -30,6 +30,7 @@ class LoginViewController: UIViewController, LoginViewControllerProtocol {
     }
     
     func showError(_ error: Error) {
+        print("Mostrar error: \(error)")
         // mostrar error, pero lo hare mas tarde
     }
 

@@ -31,11 +31,21 @@ class RouterLogin: RouterLoginProtocol {
         
         return view
     }
-    
+    /*
     func navigateToPokemonList() {
+        print("Navegación a la lista de Pokemons.")
         // nombre provisional
         let pokemonListViewController = PokedexListViewController()
         viewController?.navigationController?.pushViewController(pokemonListViewController, animated: true)
     }
+     */
+    func navigateToPokemonList() {
+        print("Navegación a la lista de Pokemons.")
+        // nombre provisional
+
+        let pokemonListViewController = PokedexListRouter.createPokedexListModule()
+        viewController?.navigationController?.pushViewController(pokemonListViewController, animated: true)
+    }
+
 }
 

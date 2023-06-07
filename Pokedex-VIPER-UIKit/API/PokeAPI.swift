@@ -22,7 +22,7 @@ enum NetworkError: Error {
 protocol PokeApiProtocol {
     // El método fetchPokemons utiliza una función de cierre (o callback) para manejar la respuesta cuando se recibe.
     // Result es una enumeración que representa el éxito o el fracaso de una operación. En este caso, si la operación es exitosa, devuelve un array de Pokemon. Si falla, devuelve un Error.
-    func fetchPokemons(completion: @escaping (Result<[PokemonModel], Error>) -> Void)
+    func fetchPokemons(completion: @escaping (Result<[PokemonModel?], Error>) -> Void)
 }
 
 
@@ -30,9 +30,35 @@ protocol PokeApiProtocol {
 class PokeApi: PokeApiProtocol {
     
     // Implementa el método fetchPokemons del protocolo. En este método, realiza una llamada a la API y luego pasa los datos recibidos a la función de cierre.
+    
+    func fetchPokemons(completion: @escaping (Result<[PokemonModel?], Error>) -> Void) {
+        let url = URL(string: "https://pokedex-bb36f.firebaseio.com/pokemon.json")!
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if let error = error {
+                completion(.failure(error))
+                return
+            }
+            do {
+                let decoder = JSONDecoder()
+                if let data = data {
+                    let pokemons = try decoder.decode([PokemonModel?].self, from: data)
+                    completion(.success(pokemons))
+                }
+            } catch {
+                completion(.failure(error))
+            }
+        }
+        task.resume()
+    }
+
+
+
+
+    /*
     func fetchPokemons(completion: @escaping (Result<[PokemonModel], Error>) -> Void) {
-        
+        print("Inicio de la llamada a la API de Pokemons.")
         // Trata de convertir el string de la URL en un objeto URL. Si falla, llama a la función de cierre con un error y luego termina el método.
+        print("URL: \(ConstantsURL.api_base_url)")
         guard let url = URL(string: ConstantsURL.api_base_url) else {
             completion(.failure(NetworkError.invalidURL))
             return
@@ -52,6 +78,9 @@ class PokeApi: PokeApiProtocol {
                 completion(.failure(NetworkError.noData))
                 return
             }
+            // Imprimir los datos recibidos
+           let dataString = String(data: data, encoding: .utf8)
+           print("Datos: \(dataString ?? "")")
             
             // Intenta decodificar los datos recibidos como un array de Pokemon. Si la decodificación falla, llama a la función de cierre con el error de decodificación.
             do {
@@ -59,6 +88,7 @@ class PokeApi: PokeApiProtocol {
                 // Si la decodificación es exitosa, llama a la función de cierre con los datos decodificados.
                 completion(.success(pokemons))
             } catch {
+                print("Error en la decodificación: \(error)")
                 completion(.failure(error))
             }
         }
@@ -66,6 +96,7 @@ class PokeApi: PokeApiProtocol {
         // Inicia la tarea. Hasta este punto, sólo hemos definido lo que debería hacer la tarea, pero no se ha ejecutado aún.
         task.resume()
     }
+     */
 }
 
 

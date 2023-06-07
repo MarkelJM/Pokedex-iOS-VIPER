@@ -21,6 +21,7 @@ class InteractorLogin: InputInteractorLoginProtocol{
     weak var presenter: OutputInteractorLoginProtocol?
     
     func handleStartButtonTapped() {
+        print("Manejo del botón de inicio presionado.")
         presenter?.didSuccessfullyHandleStartButtonTapped()
         
         

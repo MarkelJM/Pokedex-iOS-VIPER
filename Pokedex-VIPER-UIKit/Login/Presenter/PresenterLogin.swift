@@ -19,6 +19,7 @@ class PresenterLogin: PresenterLoginProtocol{
     
     /* para interactuar con el boton de la view*/
     func startButtonWasPressed() {
+        print("Botón de inicio presionado.")
         interactor?.handleStartButtonTapped()
     }
 }
