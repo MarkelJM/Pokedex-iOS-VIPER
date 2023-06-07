@@ -8,8 +8,8 @@
 import Foundation
 
 protocol ViewToPresenterProtocol: AnyObject {
-    var view: PresenterToPokedexListViewProtocol? { get set }
-    var interactor: PresenterToPokedexListInteractorProtocol? { get set }
+    var view: PresenterToViewProtocol? { get set }
+    var interactor: PresenterToInteractorProtocol? { get set }
     var router: PokedexRouterProtocolo? { get set }
     
     func viewDidLoad()
@@ -22,9 +22,11 @@ protocol InteractorToPresenterProtocol: AnyObject {
 }
 
 
-class PokedexListPresenter: ViewToPresenterProtocol {
-    weak var view: PresenterToPokedexListViewProtocol?
-    var interactor: PresenterToPokedexListInteractorProtocol?
+class PokedexListPresenter: ViewToPresenterProtocol , InteractorToPresenterProtocol{
+    
+    
+    weak var view: PresenterToViewProtocol?
+    var interactor: PresenterToInteractorProtocol?
     var router: PokedexRouterProtocolo?
     
     func viewDidLoad() {
@@ -33,6 +35,14 @@ class PokedexListPresenter: ViewToPresenterProtocol {
     
     func didSelectPokemon(_ pokemon: PokemonModel) {
         router?.navigateToPokemonDetail(pokemon)
+    }
+    
+    func didFetchPokemons(_ pokemons: [PokemonModel]) {
+    
+    }
+    
+    func didFailFetchingPokemons(withError error: Error) {
+    
     }
 }
 

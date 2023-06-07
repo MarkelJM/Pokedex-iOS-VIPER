@@ -28,7 +28,7 @@ class PokedexListRouter: PokedexRouterProtocolo {
         presenter.router = router
         presenter.interactor = interactor
         interactor.presenter = presenter
-        interactor.pokeApi = PokeApi() // esto es solo un ejemplo, puedes configurarlo de la manera que mejor te parezca
+        interactor.pokeApi = PokeApi() 
         router.viewController = view
         
         return view

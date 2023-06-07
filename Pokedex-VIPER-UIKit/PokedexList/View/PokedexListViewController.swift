@@ -7,12 +7,14 @@
 
 import UIKit
 
-protocol PresenterToPokedexListViewProtocol: AnyObject {
+protocol PresenterToViewProtocol: AnyObject {
     func showPokemons(_ pokemons: [PokemonModel])
     func showError(_ error: Error)
 }
 
-class PokedexListViewController: UIViewController , UITableViewDelegate, UITableViewDataSource{
+class PokedexListViewController: UIViewController , UITableViewDelegate, UITableViewDataSource, PresenterToViewProtocol{
+    var presenter: ViewToPresenterProtocol?
+    
     
     
 
@@ -29,13 +31,22 @@ class PokedexListViewController: UIViewController , UITableViewDelegate, UITable
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         //falta algo nose el qué, algo para pintar los pokemons
         return cell
+    }
+    
+    //Por el protocolo PresenterToViewProtocol
+    func showPokemons(_ pokemons: [PokemonModel]) {
+        // implementar cómo mostrar los pokemons aquí
+    }
+    
+    func showError(_ error: Error) {
+        //el error
     }
     
 

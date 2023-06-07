@@ -7,14 +7,14 @@
 
 import Foundation
 
-protocol PresenterToPokedexListInteractorProtocol: AnyObject {
+protocol PresenterToInteractorProtocol: AnyObject {
     var presenter: InteractorToPresenterProtocol? { get set }
     
     func fetchPokemons()
 }
 
 
-class PokedexListInteractor: PresenterToPokedexListInteractorProtocol {
+class PokedexListInteractor: PresenterToInteractorProtocol {
     weak var presenter: InteractorToPresenterProtocol?
     var pokeApi: PokeApiProtocol? // asegúrate de inyectar una instancia de PokeApi aquí, probablemente desde el Router
     
