@@ -56,6 +56,8 @@ class PokedexListPresenter: ViewToPresenterProtocol , InteractorToPresenterProto
     func didFailFetchingPokemons(withError error: Error) {
         view?.showError(error)  // Llama al método del view para mostrar el error
     }
+    
+    
 }
 
 

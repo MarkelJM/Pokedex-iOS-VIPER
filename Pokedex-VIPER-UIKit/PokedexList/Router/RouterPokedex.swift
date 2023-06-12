@@ -35,7 +35,17 @@ class PokedexListRouter: PokedexRouterProtocolo {
         return view
     }
     
-    func navigateToPokemonDetail(_ pokemon: PokemonModel) {
-        // implementar la navegación al módulo de detalle del Pokémon aquí
+    func createDetailModule(with pokemon: PokemonModel) -> UIViewController {
+        /* método en router para crear el módulo de detalle*/
+        let view = DetailViewController(nibName: "DetailViewController", bundle: nil)
+        view.pokemon = pokemon
+        return view
     }
+
+    
+    func navigateToPokemonDetail(_ pokemon: PokemonModel) {
+        let detailVC = createDetailModule(with: pokemon)
+        viewController?.navigationController?.pushViewController(detailVC, animated: true)
+    }
+
 }

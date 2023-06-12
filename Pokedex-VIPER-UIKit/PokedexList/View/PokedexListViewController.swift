@@ -25,8 +25,8 @@ class PokedexListViewController: UIViewController, UITableViewDelegate, UITableV
         tableView.delegate = self
         tableView.dataSource = self
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-
+        tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "PokemonCell")
+        
         presenter?.viewDidLoad()  // Llama al presenter para cargar los pokemons
         print("view did load ended")
         
@@ -40,12 +40,28 @@ class PokedexListViewController: UIViewController, UITableViewDelegate, UITableV
     }
         
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PokemonCell", for: indexPath) as! TableViewCell
         let pokemon = pokemons.compactMap { $0 }[indexPath.row]  // ignora los elementos nulos
-        print("cell")
-        cell.textLabel?.text = pokemon.name
+        cell.namePokemonCell.text = pokemon.name
+            
+        if let imageUrl = pokemon.imageUrl, let url = URL(string: imageUrl) {
+            URLSession.shared.dataTask(with: url) { (data, response, error) in
+                if let data = data {
+                    DispatchQueue.main.async {
+                        cell.imagePokemonCell.image = UIImage(data: data)
+                    }
+                }
+            }.resume()
+        }
+            
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let pokemon = pokemons[indexPath.row]
+        presenter?.didSelectPokemon(pokemon)
+    }
+
 
 
     // Implementación del protocolo PresenterToViewProtocol
